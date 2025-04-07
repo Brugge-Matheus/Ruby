@@ -1,0 +1,2 @@
+Escrevendo em arquivo de texto
+Hello WorldOlá mundo

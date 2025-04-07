@@ -7,6 +7,11 @@ else
   puts "#{b} maior que #{a}"
 end
 
+x = 2
+y = 3
+
+if x > y then puts "x is greater" else puts "y is greater" end
+
 # Exemplo mais completo
 puts 'Digite o nome do filme'
 name = gets.chomp
