@@ -1,12 +1,12 @@
 module Square
   def self.area(side)
-    return side * side 
+    side * side
   end
 end
 
 module Rectangle
   def self.area(base, width)
-    return base * width
+    base * width
   end
 end
 
