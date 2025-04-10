@@ -5,7 +5,7 @@ puts 'informe o ano de lançamento'
 yearnLauncher = gets.chomp.to_i
   
 puts 'Informe o preço do filme:'
-price = gets.chomp.to_i
+price = gets.chomp.to_f
 
 # Concatenação e exibição dos valores
 puts 'Nome do filme ' + name.to_str

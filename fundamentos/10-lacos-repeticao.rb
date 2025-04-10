@@ -38,6 +38,7 @@ object = {
   age: 19
 }
 
+
 for index, value in object
  puts "#{index}: #{value}"
 end

@@ -9,7 +9,7 @@ case option
 when 1
   # Pesquisa palavras em nomes de arquivos
   def search(key)
-    files = Dir.glob("data/*.txt")
+    files = Dir.glob("arquivos-modulos-gems/data/*.txt")
     response = {}
 
     files.each_with_index do |file, index|
@@ -40,7 +40,7 @@ when 1
 when 2
   # Pesquisa palavras no conteúdo dos arquivos
   def search_in_file(key)
-    files = Dir.glob("data/*.txt")
+    files = Dir.glob("arquivos-modulos-gems/data/*.txt")
     response = {}
 
     files.each_with_index do |file, index|
