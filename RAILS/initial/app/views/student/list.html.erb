@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>Listagem de estudantes</h1>
+
+    <div class="accordion" id="accordionExample">
+        <% @students.each do |student| %>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#<%= student[:name] %>" aria-expanded="false" aria-controls="<%= student[:name] %>">
+                    <%= student[:name] %>
+                </button>
+                </h2>
+                <div id="<%= student[:name] %>" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>Idade: <%= student[:age] %></p>
+                    <p>Descrição: <%= student[:description] %></p>
+                </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+
+    <a class="btn btn-primary" href="<%= home_path %>" role="button">Home</a> 
+    <!--  <%= link_to "Home", home_path %> -->
+</div>

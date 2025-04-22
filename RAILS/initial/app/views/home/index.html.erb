@@ -1,0 +1,11 @@
+<h2>Ola mundo</h2> 
+<h3>Autor do Blog: <%= @author %> </h3>
+
+<h3>Posts:</h3>
+<% @posts.each do |post| %>
+    <p>
+        <%= post[:title] %> - <%= post[:body] %>
+    </p>
+<% end %>
+
+<%= link_to "Estudantes", studies_path %> 
