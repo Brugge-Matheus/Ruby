@@ -1,0 +1,15 @@
+current directory: /home/brugge-matheus/Ruby/RAILS/model_and_migration/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.7/ext/websocket-driver
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20250419-32770-w2e8l2.rb extconf.rb
+creating Makefile
+
+current directory: /home/brugge-matheus/Ruby/RAILS/model_and_migration/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.7/ext/websocket-driver
+make DESTDIR\= clean
+
+current directory: /home/brugge-matheus/Ruby/RAILS/model_and_migration/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.7/ext/websocket-driver
+make DESTDIR\=
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/brugge-matheus/Ruby/RAILS/model_and_migration/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.7/ext/websocket-driver
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20250419-32770-xz7z2e
