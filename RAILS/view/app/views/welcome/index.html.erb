@@ -1,0 +1,15 @@
+<h1>Produtos Disponiveis:</h1>
+<ul>
+  <% @produtos.each do |produto| %>
+    <li><%= produto["name"] %> - R$<%= produto["price"] %></li>
+  <% end %>
+</ul>
+<h2>Adicionando novo produto</h2>
+<hr>
+<%= form_tag({ controller: "welcome", action: "create_product" }, method: "post") do %>
+  <label for="name">Nome:</label>
+  <%= text_field_tag "name", nil, required: true %>
+  <label for="price">Preço:</label>
+  <%= number_field_tag "price", nil, required: true %>
+  <%= submit_tag "Adicionar Produto" %>
+<% end %>
