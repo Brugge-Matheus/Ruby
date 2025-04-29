@@ -14,16 +14,21 @@ class ArticlesController < ApplicationController
   # GET /articles/new
   def new
     @article = Article.new
+
+    authorize @article
   end
 
   # GET /articles/1/edit
   def edit
+    authorize @article
   end
 
   # POST /articles or /articles.json
   def create
     @article = Article.new(article_params)
     @article.user = current_user
+
+    authorize @article
 
     respond_to do |format|
       if @article.save
@@ -54,7 +59,7 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1 or /articles/1.json
   def destroy
     authorize @article
-    
+
     @article.destroy!
 
     respond_to do |format|
@@ -72,6 +77,6 @@ class ArticlesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def article_params
-    params.expect(article: [:title, :description])
+    params.expect(article: [ :title, :description ])
   end
 end
