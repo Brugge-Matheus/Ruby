@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root "student#list"
+  get "search", to: "search#index"
+
   devise_for :users
   resources :posts do
     resources :comments

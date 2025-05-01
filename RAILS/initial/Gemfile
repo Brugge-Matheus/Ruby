@@ -69,3 +69,5 @@ gem "devise", "~> 4.9"
 gem "solargraph", "~> 0.54.2"
 
 gem "ruby-lsp", "~> 0.23.15"
+
+gem "ransack", "~> 4.3"

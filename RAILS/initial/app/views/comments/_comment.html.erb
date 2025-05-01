@@ -1,0 +1,24 @@
+<div style="border: 1px solid black; padding: 10px;" id="<%= comment.id %>">
+    <%= comment.user.email %>
+
+    <% if comment.created_at < comment.updated_at %>
+        <span>Postado a <%= time_ago_in_words(comment.created_at) %></span>
+    <% else %>
+        <span>Editado a <%= time_ago_in_words(comment.created_at) %></span>
+    <% end %>
+
+    <% if current_user == comment.user %>
+        <div class="btn-group float-end">
+            <%= button_to "Editar", nil, remote: true, class:  "btn btn-warning", data: {controller: "comments", action: "comments#togglEditForm", comments_form_param: "edit-form-#{comment.id}"} %>
+            <%= button_to "Deletar", [post, comment], method: :delete, class: "btn btn-danger", data: {turbo_confirm: "Tem certeza que deseja excluir?"}  %>
+        </div>
+    <% end %>
+    <div id="edit-form-<%= comment.id %>" class="d-none">
+        <%= render "comments/form", post: @post, comment: comment, submit_label: "Edit" %>
+    </div>
+    <hr>
+
+    <div id="comment-body-<%= comment.id %>">
+        <%= comment.body %>
+    </div>
+</div>

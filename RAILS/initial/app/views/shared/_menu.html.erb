@@ -7,7 +7,7 @@
         <%= link_to "Estudantes", studies_path, class:"nav-link active" %>
         </li>
         <% if user_signed_in? %>
-            <%= link_to "Logout", destroy_user_session_path, class: "nav-link active", data: {turbo_method: :delete} %>
+            <%= link_to "Logout", destroy_user_session_path, class: "nav-link active", data: {turbo_method: :delete, turbo_confirm: "Tem certeza que deseja fazer logout?"} %>
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
